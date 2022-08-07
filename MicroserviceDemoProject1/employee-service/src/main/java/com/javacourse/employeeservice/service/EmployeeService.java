@@ -26,7 +26,7 @@ public class EmployeeService {
         Employee employee = repository.findByEmployeeId(employeeID);
 
         Department department = restTemplate
-                .getForObject("http://localhost:9001/departments/" + employee.getDepartmentId(),
+                .getForObject("http://DEPARTMENT-SERVICE/departments/" + employee.getDepartmentId(),
                         Department.class);
 
         response.setEmployee(employee);
